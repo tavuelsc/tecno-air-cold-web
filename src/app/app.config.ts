@@ -6,8 +6,10 @@ import {
   provideClientHydration,
   withEventReplay,
 } from '@angular/platform-browser';
-
 import { provideHttpClient, withFetch } from '@angular/common/http';
+import { register } from 'swiper/element/bundle';
+
+register();
 
 export const appConfig: ApplicationConfig = {
   providers: [
