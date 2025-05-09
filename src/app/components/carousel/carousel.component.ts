@@ -11,22 +11,17 @@ import { ServiceCardComponent } from "../service-card/service-card.component";
 })
 
 export class CarouselComponent {
-  @ViewChild('swiperContainer') swiperContainer!: ElementRef;
-  private swiperInstance: any;
-
-  ngAfterViewInit(): void {
+  @ViewChild('swiperContainer', { static: false }) swiperEl!: ElementRef;
+  
+  ngAfterViewInit() {
     setTimeout(() => {
-      const swiperEl = this.swiperContainer.nativeElement as any;
-      if(!swiperEl || swiperEl.swiper || typeof swiperEl.initialize !== 'function') return;
-      swiperEl.initialize();
-      this.swiperInstance = swiperEl.swiper;
-    }, 50);
-  }
+      const swiperElement = this.swiperEl?.nativeElement;
 
-  ngOnDestroy(): void {
-    if (this.swiperInstance) {
-      this.swiperInstance.destroy(true, true);
-      this.swiperInstance = null;
-    }
+      if (swiperElement?.initialize) {
+        swiperElement.initialize();
+      } else {
+        console.error('Swiper no se ha registrado correctamente o initialize no está disponible.');
+      }
+    }, 0);
   }
 }

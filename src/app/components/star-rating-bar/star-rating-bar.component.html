@@ -1,0 +1,9 @@
+<div class="star-rating-bar-container">
+  <img
+    *ngFor="let star of [1, 2, 3, 4, 5]"
+    [attr.alt]="'Estrella ' + star"
+    [src]="star <= rating ? 'assets/images/icons/icon-star-filled.svg' : 'assets/images/icons/icon-star-empty.svg'"
+    width="24"
+    height="24"
+  />
+</div>
