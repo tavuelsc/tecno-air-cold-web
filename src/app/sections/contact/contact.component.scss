@@ -1,4 +1,158 @@
-section {
-  background-color: red;
-  height: 500px;
+@use "styles/variables" as *;
+@use "styles/mixins" as *;
+
+#contacto {
+  padding: 0px 47px 70px 47px;
+
+  @include respond(sm) {
+    padding-left: 64px;
+    padding-right: 64px;
+  }
+  @include respond(md) {
+    padding-left: 100px;
+    padding-right: 100px;
+  }
+  @include respond(xl) {
+    padding: 0px 190px 128px 190px;
+  }
+}
+.contact-main-container {
+  position: relative;
+  z-index: 1;
+  background-color: $dark-blue;
+  color: white;
+  font-weight: 900;
+  width: 100%;
+  max-width: $max-section-width;
+  margin: auto;
+
+  @include respond(lg) {
+    display: flex;
+  }
+}
+.contact-form-container {
+  padding: 30px;
+  text-transform: uppercase;
+  font-size: 1.2rem;
+
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+    label {
+      margin-top: 12px;
+    }
+    input,
+    textarea {
+      background-color: $dark-blue;
+      border: 1px solid white;
+      border-radius: 5px;
+      height: 38px;
+      color: white;
+      padding-left: 10px;
+      font-size: 1.25rem;
+    }
+    textarea {
+      height: 80px;
+    }
+    button {
+      margin-top: 32px;
+      font-weight: 900;
+      text-transform: uppercase;
+      width: fit-content;
+      align-self: center;
+      border-radius: 50px;
+      padding: 12px 12px;
+      font-size: 1.4rem;
+      border: none;
+    }
+  }
+
+  @include respond(md) {
+    padding: 53px 78px 44px 78px;
+    font-size: 0.8rem;
+
+    form {
+      input,
+      textarea {
+        font-size: .9rem;
+      }
+    }
+  }
+  @include respond(lg) {
+    order: 1;
+    font-size: 0.8rem;
+    padding: 53px 44px 44px 44px;
+    width: 50%;
+
+    form {
+      gap: 15px;
+
+      label {
+        margin-top: 35px;
+      }
+      input,
+      textarea {
+        background-color: $dark-blue;
+        border: 1px solid white;
+        border-radius: 5px;
+        height: 50px;
+        font-size: 0.8rem;
+      }
+      textarea {
+        height: 126px;
+      }
+      button {
+        margin-top: 40px;
+        font-size: 1rem;
+        padding: 16px 23px;
+      }
+    }
+  }
+  @include respond(xl) {
+    padding: 53px 85px 44px 85px;
+    width: 55%;
+  }
+}
+.error-mesage {
+  color: $red-pastel;
+}
+.contact-banner {
+  position: relative;
+  height: 183px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+
+  h1 {
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 2.4rem;
+  }
+
+  @include respond(md) {
+    height: 300px;
+  }
+  @include respond(lg) {
+    order: 2;
+    width: 50%;
+    height: auto;
+  }
+  @include respond(xl) {
+    width: 45%;
+  }
+}
+.contact-banner::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("/assets/images/img-house-corner.jpg");
+  background-size: cover;
+  background-position: center;
+  opacity: 0.3;
+  z-index: -1;
 }
