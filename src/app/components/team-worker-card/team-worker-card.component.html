@@ -1,0 +1,15 @@
+<div class="team-card">
+  <div class="team-card-worker-image-container">
+    <div class="team-card-image-background"></div>
+    <img
+      class="team-card-worker-image"
+      [src]="workerImageUrl"
+      alt="Imagen de {{ workerName }}"
+    />
+  </div>
+  <div class="team-card-worker-details">
+    <h4 class="team-card-worker-name">{{ workerName }}</h4>
+    <h4 class="team-card-worker-roleName">{{ roleName }}</h4>
+    <p>{{ roleDescription }}</p>
+  </div>
+</div>
