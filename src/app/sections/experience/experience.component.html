@@ -1,3 +1,43 @@
 <section id="experiencia" class="scroll-targetable-section">
-  <p>experience works!</p>
+  <div class="experience-section-details-panel">
+    <div class="experience-section-details-intro item1">
+      <h1 class="experience-section-title">Nuestra <span>experiencia</span></h1>
+      <p>
+        Nuestro equipo cuenta con una sólida formación técnica respaldada por
+        certificaciones, cursos especializados y una cultura de buenas
+        prácticas. Cada proyecto refleja nuestro compromiso con la calidad, la
+        seguridad y la eficiencia.
+      </p>
+    </div>
+    <div class="experience-cards-container item2">
+      <app-experience-card
+        title="Certificaciones"
+        iconUrl="assets/images/icons/icon-decorated-check.svg"
+        [features]="[
+          'INTE G38',
+          'Carné de Manipulación de Gases Refrigerantes',
+          'Eficiencia Energética',
+          'Instalación y Mantenimiento de Sistemas HVAC',
+          'Automatización de Sistemas de Climatización',
+          'Normativas de Seguridad Eléctrica'
+        ]"
+      />
+      <app-experience-card
+        title="Buenas prácticas"
+        iconUrl="assets/images/icons/icon-position-inverted-tools.svg"
+        [features]="[
+          'Uso seguro de gases refrigerantes',
+          'Pruebas de presión y verificación de fugas',
+          'Instalaciones limpias y organizadas',
+          'Mantenimiento preventivo',
+          'Gestión responsable de residuos técnicos'
+        ]"
+      />
+    </div>
+    <div class="experience-images-container item3">
+      <img class="experience-image experience-image-1" src="assets/images/img-random-employee-b.jpg" alt="Imagen de trabajadores">
+      <img class="experience-image experience-image-2" src="assets/images/img-random-employee-c.jpg" alt="Imagen de trabajador">
+      <img class="experience-image experience-image-3" src="assets/images/img-random-employee-a.jpg" alt="Imagen de trabajador">
+    </div>
+  </div>
 </section>
