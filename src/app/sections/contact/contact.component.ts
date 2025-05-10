@@ -39,5 +39,4 @@ Gracias por su atención, quedo atento(a).
 
     window.open(urlWhatsApp, '_blank');
   }
-
 }
