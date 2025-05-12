@@ -1,0 +1,53 @@
+@use "styles/mixins" as *;
+@use "styles/variables" as *;
+@use "swiper/css";
+@use "swiper/css/navigation";
+@use "swiper/css/pagination";
+
+swiper-container {
+  max-width: 70vw;
+  height: 350px;
+
+  @include respond(xs) {
+    max-width: 60vw;
+  }
+  @include respond(sm) {
+    height: 450px;
+  }
+  @include respond(md) {
+    height: 600px;
+    max-width: 70vw;
+  }
+  @include respond(xl) {
+    max-width: 82vw;
+  }
+  @include respond(2xl) {
+    max-width: 70vw;
+  }
+}
+
+swiper-slide {
+  padding: 0px 4px 100px 4px;
+  transition: transform 0.3s;
+
+  @include respond(md) {
+    padding: 0px 2px 100px 2px;
+  }
+  @include respond(lg) {
+    padding: 0px 23px 100px 23px;
+  }
+  @include respond(xl) {
+    padding: 0px 4px 100px 4px;
+    transform: scale(0.8);
+  }
+}
+
+.swiper-slide-next {
+  transform: scale(0.8);
+  padding-bottom: 100px;
+  transition: transform 0.3s;
+  
+  @include respond(xl) {
+    transform: scale(1);
+  }
+}
