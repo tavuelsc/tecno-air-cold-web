@@ -1,25 +1,42 @@
-import { Component, HostListener } from '@angular/core';
+import { isPlatformBrowser } from '@angular/common';
+import {
+  AfterViewInit,
+  Component,
+  HostListener,
+  Inject,
+  PLATFORM_ID,
+} from '@angular/core';
 import { MatIconModule } from '@angular/material/icon';
 
 @Component({
   selector: 'app-navbar',
   imports: [MatIconModule],
   templateUrl: './navbar.component.html',
-  styleUrl: './navbar.component.scss'
+  styleUrl: './navbar.component.scss',
 })
-
-export class NavbarComponent {
-
+export class NavbarComponent implements AfterViewInit {
   menuOpen = false;
   isScrolled = false;
   activeSection: string = '';
 
-  @HostListener('window:scroll', [])
-  onWindowScroll() {
-    const offset = window.scrollY || document.documentElement.scrollTop || document.body.scrollTop || 0;
+  constructor(@Inject(PLATFORM_ID) private platformId: Object) {}
+
+  checkActiveSection() {
+    const offset =
+      window.scrollY ||
+      document.documentElement.scrollTop ||
+      document.body.scrollTop ||
+      0;
     this.isScrolled = offset > 100;
 
-    const sectionIds = ['inicio', 'servicios', 'resenas', 'experiencia', 'equipo', 'contacto'];
+    const sectionIds = [
+      'inicio',
+      'servicios',
+      'resenas',
+      'experiencia',
+      'equipo',
+      'contacto',
+    ];
     for (let id of sectionIds) {
       const section = document.getElementById(id);
       if (section) {
@@ -32,6 +49,17 @@ export class NavbarComponent {
     }
   }
 
+  @HostListener('window:scroll', [])
+  onWindowScroll() {
+    this.checkActiveSection();
+  }
+
+  ngAfterViewInit() {
+    setTimeout(() => {
+      if (isPlatformBrowser(this.platformId)) this.checkActiveSection();
+    }, 300);
+  }
+
   toggleMenu() {
     this.menuOpen = !this.menuOpen;
   }
@@ -39,5 +67,4 @@ export class NavbarComponent {
   closeMenu() {
     this.menuOpen = false;
   }
-
 }
