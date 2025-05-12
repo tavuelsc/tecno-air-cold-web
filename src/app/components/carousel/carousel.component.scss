@@ -41,7 +41,7 @@ swiper-slide {
 
 swiper-container::part(bullet-active) {
   background-color: white;
-  scale: 1.5;
+  scale: 1.25;
   transition: scale ease-in-out .3s;
 }
 swiper-container::part(bullet) {

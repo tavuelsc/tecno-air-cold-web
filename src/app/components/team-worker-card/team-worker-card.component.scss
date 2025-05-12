@@ -1,0 +1,64 @@
+@use "styles/variables.scss" as *;
+@use "styles/mixins.scss" as *;
+
+.team-card {
+  width: 100%;
+  height: fit-content;
+}
+.team-card-worker-image-container {
+  position: relative;
+  max-width: 100%;
+  height: 100%;
+}
+.team-card-image-background {
+  position: absolute;
+  bottom: 1px;
+  background-color: white;
+  width: 100%;
+  aspect-ratio: 237 / 264;
+  border-radius: 16px;
+
+  @include respond(sm) {
+    bottom: 3px;
+  }
+  @include respond(md) {
+    bottom: 4px;
+  }
+  @include respond(xl) {
+    bottom: 5px;
+  }
+}
+.team-card-worker-image {
+  position: relative;
+  width: 100%;
+  height: fit-content;
+  object-fit: contain;
+}
+.team-card-worker-details {
+  text-align: center;
+
+  h4 {
+    font-weight: 900;
+    margin: 5px 0px;
+  }
+  p {
+    margin: 5px 0px;
+    font-family: $font-nunito;
+  }
+
+  @include respond(md) {
+    h4 {
+      font-size: 0.8rem;
+    }
+    p {
+      font-size: 0.8rem;
+    }
+  }
+}
+.team-card-worker-name {
+  color: black;
+}
+.team-card-worker-roleName {
+  margin: 5px;
+  color: $dark-blue;
+}

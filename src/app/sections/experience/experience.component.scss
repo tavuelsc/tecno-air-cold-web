@@ -59,10 +59,17 @@
   @include respond(lg) {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(3, 1fr);
+    grid-template-rows: 1.2fr .6fr 1.2fr;
     gap: 32px;
-    padding: 120px 0px 54px 32px;
+    padding: 96px 0px 54px 0px;
     height: 100%;
+  }
+  @include respond(xl) {
+    padding-left: 32px;
+  }
+  @include respond(2xl) {
+    padding-top: 45px;
+    padding-left: 180px;
   }
 }
 .experience-image {
@@ -76,6 +83,8 @@
   @include respond(lg) {
     min-height: 100%;
   }
+  @include respond(xl) {
+  }
 }
 .experience-image-1 {
   border-radius: 40px 40px 40px 0px;
@@ -86,14 +95,23 @@
     grid-row-start: 1;
   }
 }
-.experience-image-2 {
-  border-radius: 10px;
-  height: 100px !important;
-
+.experience-image-2-container {
+  height: 100px;
   @include respond(lg) {
+    height: auto;
     grid-column-start: 2;
     grid-row-start: 3;
   }
+  @include respond(xl) {
+    grid-column-start: 2;
+    grid-row-start: 3;
+    padding-left: 32px;
+  }
+}
+.experience-image-2 {
+  object-position: top;
+  border-radius: 10px;
+  height: 100%;
 }
 .experience-image-3 {
   border-radius: 40px 0px 40px 40px;
