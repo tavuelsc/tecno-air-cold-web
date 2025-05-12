@@ -1,0 +1,109 @@
+<nav class="navbar" [class.scrolled]="isScrolled">
+  <div class="logo">
+    <a href="#inicio">
+      <mat-icon svgIcon="logo-tecno-air"></mat-icon>
+    </a>
+  </div>
+  <ul class="desktop-menu">
+    <li>
+      <a href="#inicio" [class.active]="activeSection === 'inicio'">Inicio</a>
+    </li>
+    <li>
+      <a href="#servicios" [class.active]="activeSection === 'servicios'"
+        >Servicios</a
+      >
+    </li>
+    <li>
+      <a href="#resenas" [class.active]="activeSection === 'resenas'"
+        >Reseñas</a
+      >
+    </li>
+    <li>
+      <a href="#experiencia" [class.active]="activeSection === 'experiencia'"
+        >Experiencia</a
+      >
+    </li>
+    <li>
+      <a href="#equipo" [class.active]="activeSection === 'equipo'">Equipo</a>
+    </li>
+    <li>
+      <a href="#contacto" [class.active]="activeSection === 'contacto'"
+        >Contacto</a
+      >
+    </li>
+  </ul>
+
+  <div class="hamburger-button" (click)="toggleMenu()">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
+  <ul class="mobile-menu" [class.open]="menuOpen">
+    <li>
+      <button class="mobile-menu-close-btn" (click)="closeMenu()">
+        <img src="assets/images/icons/icon-cross.svg" alt="Cerrar Menú" />
+      </button>
+    </li>
+    <li>
+      <a
+        href="#inicio"
+        [class.active]="activeSection === 'inicio'"
+        (click)="closeMenu()"
+      >
+        <mat-icon class="filled-icon" svgIcon="house"></mat-icon>
+        Inicio</a
+      >
+    </li>
+    <li>
+      <a
+        href="#servicios"
+        [class.active]="activeSection === 'servicios'"
+        (click)="closeMenu()"
+      >
+        <mat-icon class="filled-icon" svgIcon="tools"></mat-icon>
+        Servicios</a
+      >
+    </li>
+    <li>
+      <a
+        href="#resenas"
+        [class.active]="activeSection === 'resenas'"
+        (click)="closeMenu()"
+      >
+        <mat-icon class="stroked-icon" svgIcon="message-bubble"></mat-icon>
+        Reseñas</a
+      >
+    </li>
+    <li>
+      <a
+        href="#experiencia"
+        [class.active]="activeSection === 'experiencia'"
+        (click)="closeMenu()"
+      >
+        <mat-icon class="filled-icon" svgIcon="briefcase"></mat-icon>
+        Experiencia</a
+      >
+    </li>
+    <li>
+      <a
+        href="#equipo"
+        [class.active]="activeSection === 'equipo'"
+        (click)="closeMenu()"
+      >
+        <mat-icon class="filled-icon" svgIcon="persons-with-star"></mat-icon>
+        Equipo</a
+      >
+    </li>
+    <li>
+      <a
+        href="#contacto"
+        [class.active]="activeSection === 'contacto'"
+        (click)="closeMenu()"
+      >
+        <mat-icon class="filled-icon" svgIcon="person-identification"></mat-icon>
+        Contacto</a
+      >
+    </li>
+  </ul>
+</nav>
