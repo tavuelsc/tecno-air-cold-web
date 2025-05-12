@@ -7,8 +7,11 @@
   padding: 39px 15px;
   width: 100%;
 
+  @include respond(md) {
+    padding-bottom: 124px;
+  }
   @include respond(lg) {
-    padding: 54px 124px;
+    padding: 54px 124px 124px 124px;
   }
 }
 

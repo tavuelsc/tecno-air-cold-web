@@ -1,0 +1,177 @@
+@use "styles/variables" as *;
+@use "styles/mixins" as *;
+
+.footer-main-container {
+  background-color: $dark-blue;
+  color: white;
+  padding: 24px 38px;
+  max-height: 218px;
+
+  @include respond(sm) {
+    padding: 24px 52px;
+    font-size: 0.72rem;
+  }
+  @include respond(lg) {
+    padding: 42px 52px;
+    height: 400px;
+    max-height: 314px;
+    font-size: 1rem;
+  }
+}
+.footer-width-controller {
+  position: relative;
+  width: 100%;
+  max-width: $max-section-width;
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  flex-wrap: wrap;
+  height: 400px;
+  max-height: 170px;
+  margin: auto;
+
+  @include respond(lg) {
+    max-height: none;
+    flex-wrap: nowrap;
+    gap: 40px;
+    height: 100%;
+  }
+}
+
+.separator {
+  position: absolute;
+  top: 50%;
+  width: 3px;
+  height: 110%;
+  transform: translate(-50%, 0px);
+  background-color: white;
+  border-radius: 2px;
+
+  @include respond(lg) {
+    transform: translate(-50%, -50%);
+  }
+}
+.first-separator {
+  left: 50%;
+  height: auto;
+  top: 60%;
+  bottom: 0px;
+
+  @include respond(lg) {
+    top: 50%;
+    height: 110%;
+    bottom: auto;
+    left: calc((100% / 3) - 8px);
+  }
+}
+.second-separator {
+  height: 3px;
+  width: 50%;
+  top: 48.5%;
+  left: 50%;
+  max-width: 300px;
+  transform: translate(-50%, -50%);
+
+  @include respond(xs) {
+    top: 50%;
+  }
+  @include respond(md) {
+    top: 48.5%;
+  }
+  @include respond(lg) {
+    top: 50%;
+    width: 3px;
+    height: 110%;
+    left: calc((2 * 100% / 3) + 8px);
+  }
+}
+
+.footer-tecnoair-logo {
+  width: 100%;
+  height: 75px;
+  margin-bottom: 10px;
+  object-fit: contain;
+
+  @include respond(lg) {
+    width: 100%;
+    height: 100%;
+  }
+}
+.footer-social-media {
+  padding-left: 24px;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  * {
+    margin: 0px;
+  }
+
+  span {
+    text-transform: uppercase;
+  }
+  .social-icons {
+    display: flex;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    gap: 4px;
+    img {
+      width: 15px;
+      height: 15px;
+      object-fit: contain;
+    }
+
+    @include respond(lg) {
+      padding-left: 0px;
+      margin-top: 24px;
+      gap: 12px;
+      img {
+        width: 40px;
+        height: 40px;
+      }
+    }
+  }
+
+  @include respond(lg) {
+    padding: 25px 0px;
+    height: 100%;
+    width: 100%;
+  }
+}
+.footer-contact-info {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-right: 24px;
+
+  @include respond(lg) {
+    padding-right: 0;
+    padding: 25px 0px;
+    height: 100%;
+    width: 100%;
+  }
+}
+
+.contact-data-line {
+  display: flex;
+  gap: 4px;
+  align-items: center;
+  img {
+    width: 15px;
+    height: 15px;
+  }
+  a {
+    color: inherit;
+    text-decoration: none;
+    font: inherit;
+    text-transform: uppercase;
+  }
+  @include respond(lg) {
+    gap: 12px;
+    img {
+      width: 25px;
+      height: 25px;
+    }
+  }
+}

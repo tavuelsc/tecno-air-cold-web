@@ -2,6 +2,7 @@
 $dark-blue: #163860;
 $sky: #77D4FF;
 $sky-blue: #07B5FF;
+$red-pastel: #e04d45;
 
 // Specific Colors
 $sky-blue-with-opacity: rgba(7, 181, 255, 0.38);
@@ -20,4 +21,4 @@ $breakpoint-xl: 1280px;
 $breakpoint-2xl: 1536px;
 
 // Others
-$max-section-width: 1800px
+$max-section-width: $breakpoint-2xl;

@@ -1,3 +1,41 @@
 <section id="contacto" class="scroll-targetable-section">
-  <p>contact works!</p>
+  <div class="contact-main-container">
+    <div class="contact-banner">
+      <h1>¡Contáctanos!</h1>
+    </div>
+    <div class="contact-form-container">
+      <form #formulario="ngForm" (ngSubmit)="handleFormSubmit()" novalidate>
+        <label>Nombre:</label>
+        <input
+          type="text"
+          [(ngModel)]="nombre"
+          name="nombre"
+          required
+          #nombreInput="ngModel"
+        />
+        <div class="error-mesage" *ngIf="nombreInput.invalid && nombreInput.touched">
+          El nombre es obligatorio.
+        </div>
+
+        <label>Correo electrónico:</label>
+        <input
+          type="email"
+          [(ngModel)]="correo"
+          name="correo"
+          required
+          #correoInput="ngModel"
+        />
+        <div class="error-mesage" *ngIf="correoInput.invalid && correoInput.touched">
+          El correo es obligatorio.
+        </div>
+
+        <label>Mensaje:</label>
+        <textarea [(ngModel)]="mensaje" name="mensaje"></textarea>
+
+        <button type="submit" [disabled]="formulario.invalid">
+          Enviar mensaje
+        </button>
+      </form>
+    </div>
+  </div>
 </section>

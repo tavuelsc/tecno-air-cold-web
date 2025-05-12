@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { HomeComponent } from './sections/home/home.component';
 import { ServicesComponent } from './sections/services/services.component';
@@ -9,11 +8,11 @@ import { TeamComponent } from './sections/team/team.component';
 import { ContactComponent } from './sections/contact/contact.component';
 import { MatIconRegistry } from '@angular/material/icon';
 import { DomSanitizer } from '@angular/platform-browser';
+import { FooterComponent } from './components/footer/footer.component';
 
 @Component({
   selector: 'app-root',
   imports: [
-    RouterOutlet,
     NavbarComponent,
     HomeComponent,
     ServicesComponent,
@@ -21,6 +20,7 @@ import { DomSanitizer } from '@angular/platform-browser';
     ExperienceComponent,
     TeamComponent,
     ContactComponent,
+    FooterComponent
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
