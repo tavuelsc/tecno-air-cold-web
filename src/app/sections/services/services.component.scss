@@ -11,7 +11,7 @@
 
   img {
     position: absolute;
-    top: 1px;
+    top: 2px;
     transform: translate(0px, -100%);
     width: 100%;
     z-index: 0;
@@ -27,6 +27,7 @@
   z-index: 1;
   color: white;
   width: 100%;
+  max-width: $max-section-width;
 
   h1 {
     width: 100%;
