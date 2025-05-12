@@ -1,0 +1,35 @@
+<div class="review-card-container">
+  <img
+    class="review-card-background-mosaic"
+    src="assets/images/img-ovals-square.svg"
+    alt="Change this by the Mosaic"
+  />
+  <img
+    class="review-card-top-image"
+    src="assets/images/img-air-conditioning.jpg"
+    alt="Imagen representativa"
+  />
+  <h3 class="review-card-data-aux-title">
+    Tú opinión es nuestro mejor respaldo
+  </h3>
+  <div class="review-card-data-container">
+    <img
+      class="review-card-double-quotes"
+      src="assets/images/icons/icon-double-quotes.svg"
+      alt="Imagen de comillas dobles"
+    />
+    <h3 class="review-card-title">Proyecto Plaza Norte</h3>
+    <p>
+      {{ serviceDescription }}
+    </p>
+    <p>
+      "{{serviceReview}}"
+    </p>
+    <div class="review-rating-info">
+      <div class="stars-rating">
+        <app-star-rating-bar [rating]="ratingScore" />
+      </div>
+      <p>-{{ reviewerName }}</p>
+    </div>
+  </div>
+</div>
