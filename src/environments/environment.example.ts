@@ -1,4 +1,4 @@
 export const environment = {
-  production: false,
-  technoAirColdWhatsAppNumber: '50600000000',
+  production: true,
+  technoAirColdWhatsAppNumber: '50670284529',
 };
