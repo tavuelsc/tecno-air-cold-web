@@ -11,7 +11,10 @@
     padding-bottom: 124px;
   }
   @include respond(lg) {
-    padding: 54px 124px 124px 124px;
+    padding: 54px 96px 86px 96px;
+  }
+  @include respond(xl) {
+    padding: 54px 124px 86px 124px;
   }
 }
 
@@ -45,6 +48,7 @@
 
   @include respond(md) {
     font-size: 1rem;
+    padding: 0px 48px;
   }
 
   @include respond(lg) {
@@ -56,8 +60,9 @@
   grid-template-columns: repeat(2, minmax(0, 1fr));
   grid-template-rows: repeat(2, minmax(0, 1fr));
   gap: 16px;
-  padding: 0px 48px;
-  max-width: 100%;
+  padding: 0px 32px;
+  max-width: 1192px;
+  margin: auto;
 
   @include respond(xs) {
     padding: 0px 72px;
@@ -67,15 +72,22 @@
     padding: 0px 116px;
   }
   @include respond(md) {
-    padding: 0px;
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-    grid-template-rows: repeat(1, minmax(0, 1fr));
+    padding: 0px 100px;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-rows: repeat(2, minmax(0, 1fr));
+  }
+  @include respond(lg) {
+    padding: 0px 150px;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-rows: repeat(2, minmax(0, 1fr));
   }
   @include respond(xl) {
-    gap: 100px;
+    column-gap: 64px;
+    row-gap: 0px;
+    padding: 0px 124px;
   }
   @include respond(2xl) {
-    padding: 0px 86px;
+    padding: 0px 96px;
   }
 }
 
