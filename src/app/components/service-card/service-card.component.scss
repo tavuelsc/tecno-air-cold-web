@@ -1,5 +1,25 @@
-@use 'styles/variables' as *;
-@use 'styles/mixins' as *;
+@use "styles/variables" as *;
+@use "styles/mixins" as *;
+
+h2 {
+  font-size: 1.4rem;
+  @include respond(sm) {
+    font-size: 1.2rem;
+  }
+  @include respond(md) {
+    font-size: 1rem;
+  }
+}
+p {
+  font-family: $font-nunito;
+  @include respond(sm) {
+    font-size: 1rem;
+    font-family: $font-nunito;
+  }
+  @include respond(md) {
+    font-size: 0.7rem;
+  }
+}
 
 .service-card-container {
   position: relative;

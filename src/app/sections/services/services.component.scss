@@ -1,5 +1,5 @@
-@use 'styles/mixins' as *;
-@use 'styles/variables' as *;
+@use "styles/mixins" as *;
+@use "styles/variables" as *;
 
 #servicios {
   position: relative;
@@ -17,7 +17,7 @@
     z-index: 0;
   }
 
-  @include respond (sm) {
+  @include respond(sm) {
     padding: 0px 117px 54px 117px;
   }
 }
@@ -31,13 +31,28 @@
 
   h1 {
     width: 100%;
+    font-size: 2rem;
   }
   p {
-    font-size: 1rem;
+    font-size: 1.2rem;
     font-family: $font-nunito;
   }
 
+  @include respond(sm) {
+    h1 {
+      font-size: 1.6rem;
+    }
+    p {
+      font-size: 1rem;
+      font-family: $font-nunito;
+    }
+  }
   @include respond(md) {
     margin-top: -75px;
+  }
+  @include respond(xl) {
+    h1 {
+      font-size: 1.8rem;
+    }
   }
 }
