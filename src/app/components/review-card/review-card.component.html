@@ -18,13 +18,11 @@
       src="assets/images/icons/icon-double-quotes.svg"
       alt="Imagen de comillas dobles"
     />
-    <h3 class="review-card-title">Proyecto Plaza Norte</h3>
-    <p>
+    <h3 class="review-card-title">{{ companyName }}</h3>
+    <p *ngIf="serviceDescription">
       {{ serviceDescription }}
     </p>
-    <p>
-      "{{serviceReview}}"
-    </p>
+    <p>"{{ serviceReview }}"</p>
     <div class="review-rating-info">
       <div class="stars-rating">
         <app-star-rating-bar [rating]="ratingScore" />
