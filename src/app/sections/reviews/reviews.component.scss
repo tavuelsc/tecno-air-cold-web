@@ -1,5 +1,5 @@
-@use 'styles/variables' as *;
-@use 'styles/mixins' as *;
+@use "styles/variables" as *;
+@use "styles/mixins" as *;
 
 #resenas {
   min-height: 800px;
@@ -68,17 +68,27 @@ swiper-container {
     margin-top: 0;
   }
 }
-swiper-container::part(button-next),swiper-container::part(button-prev) {
+swiper-container::part(button-next),
+swiper-container::part(button-prev) {
   color: white;
-  width: 12px;
+  width: 7px;
+  height: 16px;
 
+  @include respond(sm) {
+    width: 12px;
+    height: 21px;
+  }
   @include respond(md) {
-    width: 24px;
+    width: 15px;
+    height: 30px;
   }
 }
 swiper-slide {
   padding: 0px 40px 40px 40px;
 
+  @include respond(md) {
+    padding: 0px 50px 40px 50px;
+  }
   @include respond(xl) {
     width: 24px;
     padding: 0px 75px 0px 75px;

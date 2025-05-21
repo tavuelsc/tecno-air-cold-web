@@ -10,12 +10,14 @@
     
     img {
         height: 15px;
+        width: 15px;
         object-fit: contain;
     }
 
-    @include respond(md) {
+    @include respond(lg) {
         img {
-            height: 19px;
+            height: 20px;
+            width: 20px;
             object-fit: contain;
         }
     }
