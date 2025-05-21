@@ -39,12 +39,15 @@
   flex-direction: column;
   gap: 23px;
 
+  app-experience-card {
+    width: 100%;
+  }
+
   @include respond(md) {
     padding: 0px 64px;
   }
   @include respond(xl) {
-    padding-right: 54px;
-    padding-left: 0px;
+    padding: 0px 24px 0px 0px;
     flex-direction: row;
     gap: 54px;
   }
@@ -59,13 +62,13 @@
   @include respond(lg) {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: 1.2fr .6fr 1.2fr;
+    grid-template-rows: 1.2fr 0.6fr 1.2fr;
     gap: 32px;
     padding: 96px 0px 54px 0px;
     height: 100%;
   }
   @include respond(xl) {
-    padding-left: 32px;
+    padding-left: 104px;
   }
   @include respond(2xl) {
     padding-top: 45px;
