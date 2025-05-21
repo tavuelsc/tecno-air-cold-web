@@ -1,16 +1,22 @@
 @use "styles/variables" as *;
 @use "styles/mixins" as *;
 
+a {
+  color: inherit;
+  text-decoration: none;
+  font: inherit;
+}
+
 .footer-main-container {
   background-color: $dark-blue;
   color: white;
   padding: 24px 38px;
-  max-height: 218px;
 
   @include respond(sm) {
     padding: 24px 52px;
     font-size: 0.72rem;
   }
+
   @include respond(lg) {
     padding: 42px 52px;
     height: 400px;
@@ -18,17 +24,19 @@
     font-size: 1rem;
   }
 }
+
 .footer-width-controller {
-  position: relative;
   width: 100%;
   max-width: $max-section-width;
   display: flex;
   justify-content: space-between;
   align-items: stretch;
   flex-wrap: wrap;
-  height: 400px;
-  max-height: 170px;
   margin: auto;
+
+  @include respond(sm) {
+    max-width: $max-section-width;
+  }
 
   @include respond(lg) {
     max-height: none;
@@ -38,58 +46,54 @@
   }
 }
 
-.separator {
-  position: absolute;
-  top: 50%;
-  width: 3px;
-  height: 110%;
-  transform: translate(-50%, 0px);
-  background-color: white;
-  border-radius: 2px;
+.first-separator {
+  position: relative;
+  width: 100%;
+  height: 24px;
 
-  @include respond(lg) {
+  &::after {
+    content: "";
+    position: absolute;
+    background-color: white;
+    border-radius: 2px;
+    height: 2px;
+    width: 50%;
+    max-width: 200px;
+    min-width: 100px;
+    left: 50%;
+    top: 50%;
     transform: translate(-50%, -50%);
   }
-}
-.first-separator {
-  left: 50%;
-  height: auto;
-  top: 60%;
-  bottom: 0px;
 
   @include respond(lg) {
-    top: 50%;
-    height: 110%;
-    bottom: auto;
-    left: calc((100% / 3) - 8px);
+    background-color: white;
+    border-radius: 2px;
+    align-self: stretch;
+    width: 10px;
+    height: 100%;
+
+    &::after {
+      display: none;
+    }
   }
 }
+
 .second-separator {
-  height: 3px;
-  width: 50%;
-  top: 48.5%;
-  left: 50%;
-  max-width: 300px;
-  transform: translate(-50%, -50%);
+  background-color: white;
+  border-radius: 2px;
+  align-self: stretch;
+  width: 2px;
+  margin-bottom: -12px;
 
-  @include respond(xs) {
-    top: 50%;
-  }
-  @include respond(md) {
-    top: 48.5%;
-  }
   @include respond(lg) {
-    top: 50%;
-    width: 3px;
-    height: 110%;
-    left: calc((2 * 100% / 3) + 8px);
+    width: 10px;
+    margin-bottom: 0px;
   }
 }
 
 .footer-tecnoair-logo {
   width: 100%;
-  height: 75px;
-  margin-bottom: 10px;
+  height: 85px;
   object-fit: contain;
 
   @include respond(lg) {
@@ -97,12 +101,13 @@
     height: 100%;
   }
 }
+
 .footer-social-media {
-  padding-left: 24px;
-  width: 50%;
+  width: 44%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+
   * {
     margin: 0px;
   }
@@ -110,21 +115,24 @@
   span {
     text-transform: uppercase;
   }
+
   .social-icons {
     display: flex;
     margin-top: 5px;
     margin-bottom: 10px;
-    gap: 4px;
+    gap: 14px;
+
     img {
-      width: 15px;
-      height: 15px;
+      width: 20px;
+      height: 20px;
       object-fit: contain;
     }
 
     @include respond(lg) {
       padding-left: 0px;
       margin-top: 24px;
-      gap: 12px;
+      gap: 21px;
+
       img {
         width: 40px;
         height: 40px;
@@ -138,12 +146,12 @@
     width: 100%;
   }
 }
+
 .footer-contact-info {
-  width: 50%;
+  width: 44%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding-right: 24px;
 
   @include respond(lg) {
     padding-right: 0;
@@ -157,21 +165,28 @@
   display: flex;
   gap: 4px;
   align-items: center;
+
   img {
     width: 15px;
     height: 15px;
   }
+
   a {
-    color: inherit;
-    text-decoration: none;
-    font: inherit;
     text-transform: uppercase;
+    word-break: break-all;
   }
+
   @include respond(lg) {
     gap: 12px;
+
     img {
       width: 25px;
       height: 25px;
     }
   }
+}
+
+.footer-power-by-logo {
+  width: 1.3rem;
+  height: 1.3rem;
 }
