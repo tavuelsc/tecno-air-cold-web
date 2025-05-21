@@ -1,16 +1,17 @@
 import { Component, Input } from '@angular/core';
 import { StarRatingBarComponent } from '../star-rating-bar/star-rating-bar.component';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-review-card',
-  imports: [StarRatingBarComponent],
+  imports: [StarRatingBarComponent, CommonModule],
   templateUrl: './review-card.component.html',
-  styleUrl: './review-card.component.scss'
+  styleUrl: './review-card.component.scss',
 })
 export class ReviewCardComponent {
-  @Input() reviewerName?: string = "Anónimo";
-  @Input() serviceDescription?: string = "Sin Descripción del servicio";
-  @Input() serviceReview: string = "";
+  @Input() reviewerName?: string = 'Anónimo';
+  @Input() serviceDescription?: string;
+  @Input() serviceReview: string = '';
+  @Input() companyName: string = '';
   @Input() ratingScore: number = 0;
-
 }
