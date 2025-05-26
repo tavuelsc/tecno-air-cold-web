@@ -44,6 +44,7 @@
 
   span {
     font-weight: 700;
+    font-family: $font-nunito;
   }
 
   @include respond(md) {

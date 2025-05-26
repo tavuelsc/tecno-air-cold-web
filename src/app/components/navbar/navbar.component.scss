@@ -1,6 +1,6 @@
-@use 'sass:color';
-@use 'styles/variables' as *;
-@use 'styles/mixins' as *;
+@use "sass:color";
+@use "styles/variables" as *;
+@use "styles/mixins" as *;
 
 .navbar {
   position: fixed;
@@ -16,39 +16,37 @@
   transition: background-color 0.3s ease;
 
   &.scrolled {
-    background-color: #94BFE1;
+    background-color: #94bfe1;
   }
 
   .logo {
-    aspect-ratio: square;
-    width: 50px;
     a {
       display: flex;
       align-items: center;
       text-decoration: none;
-      mat-icon {
-        aspect-ratio: square;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
+      img {
+        width: 50px;
+        height: 50px;
+        object-fit: contain;
       }
+    }
+
+    width: 50px;
+    height: 50px;
+
+    @include respond(sm) {
+      a {
+        img {
+          width: 80px;
+          height: 80px;
+        }
+      }
+      width: 80px;
+      height: 80px;
     }
   }
 
   .desktop-menu {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: none;
-    gap: 0.1rem;
-
-    @include respond(md) {
-      gap: 0.25rem;
-    }
-    @include respond(lg) {
-      gap: 0.5rem;
-    }
-
     li {
       a {
         color: inherit;
@@ -63,6 +61,19 @@
           border-bottom: 3px solid color.adjust($dark-blue, $alpha: -0.75);
         }
       }
+    }
+
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: none;
+    gap: 0.1rem;
+
+    @include respond(md) {
+      gap: 0.25rem;
+    }
+    @include respond(lg) {
+      gap: 0.5rem;
     }
   }
 
@@ -85,7 +96,7 @@
     top: 0;
     right: -100%;
     width: fit-content;
-    background-color:$dark-blue;
+    background-color: $dark-blue;
     transition: right 0.3s ease-in-out;
     margin: 0;
     padding: 10px 0 70px 10px;
@@ -129,7 +140,7 @@
       cursor: pointer;
       background-color: white;
       color: $dark-blue;
-      border-radius: 100%; 
+      border-radius: 100%;
       padding: 3px;
       height: 1.5rem;
       width: 1.5rem;
@@ -145,10 +156,7 @@
 
   @include respond(sm) {
     padding: 0.4rem 1.5rem;
-    
-    .logo {
-      width: 80px;
-    }
+
     .desktop-menu {
       display: flex;
     }

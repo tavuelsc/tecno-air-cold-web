@@ -67,8 +67,12 @@
     width: 100%;
     font-family: $font-nunito;
     font-weight: 500;
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     text-align: center;
+
+    @include respond(md) {
+      font-size: 1.2rem;
+    }
   }
   button {
     margin-top: 30px;
