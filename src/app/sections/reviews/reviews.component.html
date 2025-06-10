@@ -1,0 +1,33 @@
+<section id="resenas" class="scroll-targetable-section">
+  <div class="reviews-carousel-container">
+    <h3 class="reviews-carousel-container-title">
+      Tú opinión es nuestro mejor respaldo
+    </h3>
+    <swiper-container
+      #swiperEl
+      class="reviews-carousel"
+      loop="true"
+      mousewheel-force-to-axis="true"
+      navigation="true"
+      init="false"
+    >
+      <swiper-slide>
+        <app-review-card
+          companyName="Cioccolato S.A."
+          reviewerName="Tatiana Barahona Cruz"
+          [ratingScore]="5"
+          serviceReview="Tenemos trabajando con Technoaircold Solution varios años y siempre se han caracterizado por brindar un buen servicio. Atienden con rapidez las emergencias y cumpliendo a cabalidad con lo solicitado. Recomiendo sus servicios."
+        />
+      </swiper-slide>
+      <swiper-slide>
+        <app-review-card
+          companyName="Proyecto Plaza Norte"
+          reviewerName="Laura Méndez"
+          [ratingScore]="5"
+          serviceDescription="Instalación de sistema de aire acondicionado en centro comercial de 3 niveles en 6 semanas, con mínima interrupción operativa y enfoque en eficiencia y planificación."
+          serviceReview="Excelente servicio desde el primer contacto. El equipo fue puntual, ordenado y muy profesional. Nos instalaron el aire en toda la casa en menos de una semana y quedó perfecto. Lo que más nos gustó fue la atención personalizada y la rapidez para resolver dudas. ¡Totalmente recomendados!"
+        />
+      </swiper-slide>
+    </swiper-container>
+  </div>
+</section>

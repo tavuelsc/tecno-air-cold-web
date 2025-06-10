@@ -1,0 +1,85 @@
+@use "styles/variables" as *;
+@use "styles/mixins" as *;
+
+h2 {
+  font-size: 1.4rem;
+  @include respond(sm) {
+    font-size: 1.2rem;
+  }
+  @include respond(md) {
+    font-size: 1rem;
+  }
+}
+p {
+  font-family: $font-nunito;
+  @include respond(sm) {
+    font-size: 1rem;
+    font-family: $font-nunito;
+  }
+  @include respond(md) {
+    font-size: 0.7rem;
+  }
+}
+
+.service-card-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.service-card-img {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 90%;
+  object-fit: cover;
+
+  @include respond(md) {
+    height: 70%;
+  }
+}
+
+.service-card-printer-clip {
+  position: absolute;
+  top: -18px;
+  right: 12px;
+  background-color: $dark-blue;
+  width: 46px;
+  height: 33px;
+  padding: 7px 12px 7px 12px;
+
+  @include respond(md) {
+    top: -23px;
+    width: 56px;
+    height: 37px;
+    padding: 4px 12px 1px 12px;
+  }
+}
+
+.service-card-data {
+  position: absolute;
+  bottom: 0px;
+  left: 50%;
+  transform: translate(-50%, 0px);
+  padding: 13px 19px 0px 19px;
+  background-color: white;
+  color: $dark-blue;
+  height: fit-content;
+  filter: drop-shadow(12px 24px 0px rgba(0, 0, 0, 0.2));
+  width: 80%;
+
+  @include respond(md) {
+    padding: 31px 26px 0px 26px;
+  }
+}
+.service-card-bottom-decoration {
+  position: absolute;
+  bottom: 5px;
+  right: -1px;
+  left: 0px;
+  transform: translate(0px, 100%);
+
+  object-fit: fill;
+  width: 100.21%;
+}

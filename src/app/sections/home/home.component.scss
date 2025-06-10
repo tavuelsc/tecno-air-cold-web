@@ -1,0 +1,127 @@
+@use 'styles/mixins' as *;
+@use 'styles/variables' as *;
+
+#inicio {
+  position: relative;
+  height: 970px;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  max-width: calc($max-section-width + 240px);
+  margin: auto;
+  
+  @include respond(sm) {
+    padding-left: 114px;
+  }
+  @include respond(2xl) {
+    height: 1250px;
+  }
+}
+
+#home-background {
+  position: absolute;
+  left: 50%;
+  top: 0px;
+  transform: translate(-50%, 0%);
+  width: 100vw;
+  height: 100%;
+  object-fit: cover;
+}
+
+#info-container {
+  width: 350px;
+  aspect-ratio: 33/23;
+  height: fit-content;
+  padding: 32px 11px 0 11px;
+  color: $dark-blue;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  margin: auto;
+
+  * {
+    position: relative;
+    z-index: 1;
+  }
+  #black-word {
+    color: black;
+  }
+  img {
+    z-index: 0;
+    position: absolute;
+    object-fit: contain;
+    inset: 0;
+    width: 100%;
+    opacity: 0.64;
+    filter: drop-shadow(32px 0px 10px rgba(0, 0, 0, 0.5));
+  }
+  h1 {
+    text-align: left;
+    vertical-align: middle;
+    text-transform: uppercase;
+    align-self: flex-start;
+  }
+  p {
+    margin-top: 0px;
+    width: 100%;
+    font-family: $font-nunito;
+    font-weight: 500;
+    font-size: 1.4rem;
+    text-align: center;
+
+    @include respond(md) {
+      font-size: 1.2rem;
+    }
+  }
+  button {
+    margin-top: 30px;
+    margin-right: 25px;
+    align-self: flex-end;
+    border: none;
+    background-color: $dark-blue;
+    padding: 11px 38px;
+    border-radius: 35px;
+    font-size: 1.4rem;
+    font-weight: 800;
+    color: white;
+    width: fit-content;
+    cursor: pointer;
+    @include respond(xs) {
+      margin-right: 35px;
+    }
+    @include respond(sm) {
+      margin-right: 48px;
+    }
+    @include respond(md) {
+      margin-top: 40px;
+    }
+  }
+
+  @include respond(xs) {
+    padding: 55px 16px 0 16px;
+    width: 400px;
+  }
+  @include respond(sm) {
+    padding: 50px 30px 0 30px;
+    width: 470px;
+    margin: 0;
+  }
+  @include respond(md) {
+    padding: 55px 30px 0 30px;
+    width: 525px;
+  }
+  @include respond(lg) {
+    padding: 70px 30px 0 30px ;
+    width: 628px;
+    transform: translateY(-50px);
+  }
+  @include respond(xl) {
+    padding: 80px 30px 0 30px ;
+    width: 700px;
+  }
+  @include respond(2xl) {
+    width: 750px;
+    transform: translateY(-100px);
+  }
+}

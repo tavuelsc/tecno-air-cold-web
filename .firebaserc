@@ -1,0 +1,17 @@
+{
+  "projects": {
+    "default": "tecno-air-cold"
+  },
+  "targets": {
+    "tecno-air-cold": {
+      "hosting": {
+        "prod": [
+          "lnd-tac"
+        ],
+        "dev": [
+          "lnd-tac-dev"
+        ]
+      }
+    }
+  }
+}

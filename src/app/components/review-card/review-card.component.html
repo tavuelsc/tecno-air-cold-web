@@ -1,0 +1,35 @@
+<div class="review-card-container">
+  <img
+    loading="lazy"
+    class="review-card-background-mosaic"
+    src="assets/images/img-ovals-square.svg"
+    alt="Decorador de card"
+  />
+  <img
+    loading="lazy"
+    class="review-card-top-image"
+    src="assets/images/img-air-conditioning.webp"
+    alt="Imagen representativa"
+  />
+  <h3 class="review-card-data-aux-title">
+    Tú opinión es nuestro mejor respaldo
+  </h3>
+  <div class="review-card-data-container">
+    <img
+      class="review-card-double-quotes"
+      src="assets/images/icons/icon-double-quotes.svg"
+      alt="Imagen de comillas dobles"
+    />
+    <h3 class="review-card-title">{{ companyName }}</h3>
+    <p *ngIf="serviceDescription">
+      {{ serviceDescription }}
+    </p>
+    <p>"{{ serviceReview }}"</p>
+    <div class="review-rating-info">
+      <div class="stars-rating">
+        <app-star-rating-bar [rating]="ratingScore" />
+      </div>
+      <p class="review-autor">-{{ reviewerName }}</p>
+    </div>
+  </div>
+</div>

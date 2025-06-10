@@ -1,0 +1,24 @@
+@use 'styles/variables' as *;
+@use 'styles/mixins' as *;
+
+.star-rating-bar-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1px;
+    
+    img {
+        height: 15px;
+        width: 15px;
+        object-fit: contain;
+    }
+
+    @include respond(lg) {
+        img {
+            height: 20px;
+            width: 20px;
+            object-fit: contain;
+        }
+    }
+}

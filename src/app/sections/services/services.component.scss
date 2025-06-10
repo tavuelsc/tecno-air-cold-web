@@ -1,0 +1,58 @@
+@use "styles/mixins" as *;
+@use "styles/variables" as *;
+
+#servicios {
+  position: relative;
+  background-color: $dark-blue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0px 46px 54px 46px;
+
+  img {
+    position: absolute;
+    top: 2px;
+    transform: translate(0px, -100%);
+    width: 100%;
+    z-index: 0;
+  }
+
+  @include respond(sm) {
+    padding: 0px 117px 54px 117px;
+  }
+}
+
+.services-data-container {
+  position: relative;
+  z-index: 1;
+  color: white;
+  width: 100%;
+  max-width: $max-section-width;
+
+  h1 {
+    width: 100%;
+    font-size: 2rem;
+  }
+  p {
+    font-size: 1.2rem;
+    font-family: $font-nunito;
+  }
+
+  @include respond(sm) {
+    h1 {
+      font-size: 1.6rem;
+    }
+    p {
+      font-size: 1rem;
+      font-family: $font-nunito;
+    }
+  }
+  @include respond(md) {
+    margin-top: -75px;
+  }
+  @include respond(xl) {
+    h1 {
+      font-size: 1.8rem;
+    }
+  }
+}

@@ -1,0 +1,24 @@
+// Base Colors
+$dark-blue: #163860;
+$sky: #77D4FF;
+$sky-blue: #07B5FF;
+$red-pastel: #e04d45;
+
+// Specific Colors
+$sky-blue-with-opacity: rgba(7, 181, 255, 0.38);
+$sky-with-opacity: rgba(119, 212, 255, 0.3);
+
+// Typografies
+$font-raleway: 'Raleway', sans-serif;
+$font-nunito: 'Nunito', sans-serif;
+
+// Breakpoints
+$breakpoint-xs: 480px;
+$breakpoint-sm: 640px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 1024px;
+$breakpoint-xl: 1280px;
+$breakpoint-2xl: 1536px;
+
+// Others
+$max-section-width: $breakpoint-2xl;

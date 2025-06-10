@@ -1,0 +1,96 @@
+@use "styles/variables" as *;
+@use "styles/mixins" as *;
+
+#resenas {
+  min-height: 800px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 80px 12px;
+  background-image: url("/assets/images/img-house-corner.webp");
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-size: cover;
+
+  @include respond(xs) {
+    padding: 82px 40px;
+  }
+  @include respond(sm) {
+    padding: 87px 56px;
+  }
+  @include respond(md) {
+    padding: 95px 75px;
+  }
+  @include respond(lg) {
+    padding: 104px 125px;
+  }
+  @include respond(xl) {
+    padding: 117px 179px;
+  }
+}
+
+.reviews-carousel-container {
+  position: relative;
+  width: 100%;
+  max-width: 1340px;
+  height: 651px;
+  background-color: $sky-blue-with-opacity;
+  padding: 54px 15px 32px 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: $dark-blue;
+
+  @include respond(md) {
+    padding: 59px 61px;
+    height: 563px;
+  }
+}
+
+.reviews-carousel-container-title {
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: 900;
+
+  @include respond(lg) {
+    display: none;
+  }
+}
+
+swiper-container {
+  width: 100%;
+  height: 100%;
+  margin-top: 1.2rem;
+
+  @include respond(md) {
+    margin-top: 0;
+  }
+}
+swiper-container::part(button-next),
+swiper-container::part(button-prev) {
+  color: white;
+  width: 7px;
+  height: 16px;
+
+  @include respond(sm) {
+    width: 12px;
+    height: 21px;
+  }
+  @include respond(md) {
+    width: 15px;
+    height: 30px;
+  }
+}
+swiper-slide {
+  padding: 0px 40px 40px 40px;
+
+  @include respond(md) {
+    padding: 0px 50px 40px 50px;
+  }
+  @include respond(xl) {
+    width: 24px;
+    padding: 0px 75px 0px 75px;
+  }
+}

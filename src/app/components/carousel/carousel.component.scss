@@ -1,0 +1,116 @@
+@use "styles/mixins" as *;
+@use "styles/variables" as *;
+
+swiper-container {
+  max-width: 90vw;
+  height: 350px;
+  margin: 0px -25px;
+
+  @include respond(xs) {
+    max-width: 90vw;
+  }
+  @include respond(sm) {
+    height: 450px;
+    margin: 0px -40px;
+  }
+  @include respond(md) {
+    height: 450px;
+    max-width: 90vw;
+    margin: 0px -60px;
+  }
+  @include respond(xl) {
+    height: 600px;
+    margin: auto;
+    max-width: 82vw;
+  }
+  @include respond(2xl) {
+    max-width: 70vw;
+  }
+}
+
+swiper-container::part(wrapper) {
+  @include respond(xl) {
+    padding: 0px;
+    padding-top: 25px;
+  }
+
+  @include respond(xs) {
+    max-width: 65vw;
+  }
+  @include respond(md) {
+    max-width: 75vw;
+  }
+  @include respond(xl) {
+    max-width: 82vw;
+  }
+  @include respond(2xl) {
+    max-width: 70vw;
+  }
+}
+
+swiper-container::part(bullet-active) {
+  background-color: white;
+  scale: 1.25;
+  transition: scale ease-in-out 0.3s;
+}
+swiper-container::part(bullet) {
+  background-color: white;
+  transition: scale ease-in-out 0.3s;
+}
+
+swiper-container::part(button-next),
+swiper-container::part(button-prev) {
+  color: white;
+  width: 8px;
+  height: 15px;
+
+  @include respond(md) {
+    width: 16px;
+    height: 30px;
+  }
+}
+
+swiper-slide {
+  padding: 0px 10% 100px 10%;
+  transition: transform 0.3s;
+
+  @include respond(xs) {
+    padding: 0px 75px 100px 75px;
+  }
+  @include respond(sm) {
+    padding: 0px 100px 100px 100px;
+  }
+  @include respond(md) {
+    padding: 0px 0px 100px 60px;
+  }
+  @include respond(lg) {
+    padding: 0px 0px 100px 80px;
+  }
+  @include respond(xl) {
+    padding: 0px 12px 125px 12px;
+    transform: scale(0.9);
+    &:hover {
+      transform: scale(1);
+    }
+  }
+}
+
+.swiper-slide-next {
+  transform: scale(0.8);
+  padding: 0px 0px 100px 0px;
+  transition: transform 0.3s;
+
+  @include respond(md) {
+    padding-right: 30px;
+  }
+  @include respond(lg) {
+    padding-right: 38px;
+  }
+  @include respond(xl) {
+    transform: scale(1);
+    padding: 0px 18px 125px 18px;
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+}

@@ -1,0 +1,34 @@
+<swiper-container
+  #swiperContainer
+  class="services-carousel"
+  pagination="true"
+  navigation="true"
+  breakpoints='{
+    "768": { "slidesPerView": 2 },
+    "1280": { "slidesPerView": 3 }
+  }'
+  mousewheel-force-to-axis="true"
+  init="false"
+>
+  <swiper-slide
+    ><app-service-card
+      loading="lazy"
+      imgUrl="assets/images/img-random-air-installation-a.webp"
+      cardTitle="Industrial"
+      cardDescription="Soluciones de climatización a gran escala diseñadas para procesos industriales exigentes. Instalación y mantenimiento de sistemas robustos, con enfoque en eficiencia energética y automatización."
+  /></swiper-slide>
+  <swiper-slide
+    ><app-service-card
+      loading="lazy"
+      imgUrl="assets/images/img-random-air-installation-b.webp"
+      cardTitle="Comercial"
+      cardDescription="Climatización adaptable a espacios de negocios, como oficinas, locales, supermercados y restaurantes. Garantizamos ambientes cómodos, bajo consumo y mantenimiento continuo para evitar interrupciones."
+  /></swiper-slide>
+  <swiper-slide
+    ><app-service-card
+      loading="lazy"
+      imgUrl="assets/images/img-random-air-installation-c.webp"
+      cardTitle="Residencial"
+      cardDescription="Confort en tu hogar todo el año. Instalación de aires acondicionados tipo split o inverter, asesoría personalizada y recomendaciones según el tamaño del espacio y tu estilo de vida."
+  /></swiper-slide>
+</swiper-container>
