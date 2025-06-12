@@ -4,17 +4,15 @@ import {
   ElementRef,
   ViewChild,
 } from '@angular/core';
-import { ServiceCardComponent } from '../service-card/service-card.component';
 
 @Component({
-  selector: 'app-carousel',
-  imports: [ServiceCardComponent],
-  templateUrl: './carousel.component.html',
-  styleUrl: './carousel.component.scss',
-  standalone: true,
+  selector: 'app-home-background-carousel',
+  imports: [],
+  templateUrl: './home-background-carousel.component.html',
+  styleUrl: './home-background-carousel.component.scss',
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
-export class CarouselComponent {
+export class HomeBackgroundCarouselComponent {
   @ViewChild('swiperContainer', { static: false }) swiperEl!: ElementRef;
 
   ngAfterViewInit() {
@@ -25,7 +23,7 @@ export class CarouselComponent {
         swiperElement.initialize();
       } else {
         console.error(
-          'Swiper en Servicios no se ha registrado correctamente o initialize no está disponible.'
+          'Swiper en Inicio no se ha registrado correctamente o initialize no está disponible.'
         );
       }
     }, 0);

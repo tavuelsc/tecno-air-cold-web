@@ -1,11 +1,13 @@
 import { Component } from '@angular/core';
 import { environment } from '../../../environments/environment';
+import { HomeBackgroundCarouselComponent } from '../../components/home-background-carousel/home-background-carousel.component';
 
 @Component({
   selector: 'app-home',
-  imports: [],
+  imports: [HomeBackgroundCarouselComponent],
   templateUrl: './home.component.html',
-  styleUrl: './home.component.scss'
+  styleUrl: './home.component.scss',
+  standalone: true,
 })
 export class HomeComponent {
   onButtonPressed() {

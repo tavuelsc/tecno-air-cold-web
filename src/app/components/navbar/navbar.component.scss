@@ -7,17 +7,14 @@
   top: 0;
   left: 0;
   width: 100%;
-  color: $dark-blue;
+  color: white;
   padding: 7px 11px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   z-index: 100;
   transition: background-color 0.3s ease;
-
-  &.scrolled {
-    background-color: #94bfe1;
-  }
+  background-color: $dark-blue;
 
   .logo {
     a {
@@ -55,10 +52,10 @@
         font-size: 1rem;
         font-weight: 700;
         &.active {
-          border-bottom: 3px solid $dark-blue;
+          border-bottom: 3px solid white;
         }
         &:hover {
-          border-bottom: 3px solid color.adjust($dark-blue, $alpha: -0.75);
+          border-bottom: 3px solid color.adjust(white, $alpha: -0.75);
         }
       }
     }
@@ -86,7 +83,7 @@
     span {
       width: 25px;
       height: 3px;
-      background: $dark-blue;
+      background: white;
       border-radius: 2px;
     }
   }
@@ -166,6 +163,6 @@
   }
 
   @include respond(md) {
-    padding: 0.8rem 2.25rem;
+    padding: 14px 27px;
   }
 }
