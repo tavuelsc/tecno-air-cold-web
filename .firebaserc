@@ -6,7 +6,7 @@
     "tecno-air-cold": {
       "hosting": {
         "prod": [
-          "lnd-tac"
+          "tecno-air-cold"
         ],
         "dev": [
           "lnd-tac-dev"
