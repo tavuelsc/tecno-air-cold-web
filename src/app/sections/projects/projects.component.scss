@@ -1,0 +1,153 @@
+@use "styles/mixins" as *;
+@use "styles/variables" as *;
+
+#proyectos {
+  padding: 67px 38px;
+
+  @include respond(sm) {
+    padding: 52px 52px;
+  }
+  @include respond(md) {
+    padding: 78px 68px;
+  }
+}
+
+.projects-data-container {
+  margin: auto;
+  width: 100%;
+  max-width: $max-section-width;
+  color: $dark-blue;
+
+  h1 {
+    width: 100%;
+    font-size: 2rem;
+    text-transform: uppercase;
+    margin: 0px;
+  }
+  @include respond(sm) {
+    h1 {
+      font-size: 1.6rem;
+    }
+    p {
+      font-size: 1rem;
+      font-family: $font-nunito;
+    }
+  }
+  @include respond(xl) {
+    h1 {
+      font-size: 1.8rem;
+    }
+  }
+}
+
+.title-container {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 52px;
+  margin-bottom: 39px;
+
+  @include respond(md) {
+    margin: auto;
+    margin-bottom: 50px;
+    width: 94%;
+  }
+}
+.projects-carousel-buttons-container {
+  position: absolute;
+  right: 0px;
+  bottom: 12px;
+  display: flex;
+  gap: 10px;
+
+  @include respond(lg) {
+    bottom: 16px;
+  }
+}
+
+.custom-swiper-nav-button {
+  transition: transform 0.2s;
+  background-color: transparent;
+  width: 25px;
+  height: 25px;
+  border-radius: 100%;
+  border: 3px solid $dark-blue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+
+  @include respond(lg) {
+    width: 30px;
+    height: 30px;
+  }
+}
+.custom-swiper-nav-button:hover {
+  transform: scale(1.1);
+}
+.custom-swiper-nav-button:active {
+  transition: transform 0.1s;
+  background-color: #f0f0f0;
+  transform: scale(1);
+}
+.custom-swiper-nav-button:disabled {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.carousel-navigation-arrow {
+  width: 15px;
+  height: 15px;
+  fill: $dark-blue;
+
+  &.prev {
+    transform: rotate(-180deg);
+  }
+}
+.title-bottom-line {
+  position: absolute;
+  left: 0px;
+  bottom: 1px;
+  width: 100%;
+  height: 1px;
+  background-color: #d6d6d6;
+  border-radius: 10px;
+}
+.title-bottom-line-shorter {
+  position: absolute;
+  left: 0px;
+  top: 50%;
+  transform: translate(0px, -75%);
+  width: 50px;
+  height: 2px;
+  background-color: $dark-blue;
+  border-radius: 10px;
+
+  @include respond(md) {
+    width: 150px;
+  }
+
+  @include respond(xl) {
+    width: 626px;
+  }
+}
+
+projects-swiper-container {
+  display: flex;
+}
+
+swiper-slide {
+  align-self: stretch;
+  transition: transform 0.3s, box-shadow 0.3s;
+
+  @include respond(md) {
+    transform: scale(0.93);
+  }
+}
+swiper-slide:hover {
+  @include respond(md) {
+    transform: scale(0.97);
+    box-shadow: 0 0 5px 0px rgba(0, 0, 0, 0.3);
+  }
+}

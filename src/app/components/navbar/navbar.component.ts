@@ -32,6 +32,7 @@ export class NavbarComponent implements AfterViewInit {
     const sectionIds = [
       'inicio',
       'servicios',
+      'proyectos',
       'resenas',
       'experiencia',
       'equipo',
