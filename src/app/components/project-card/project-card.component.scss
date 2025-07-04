@@ -1,0 +1,61 @@
+@use "styles/mixins" as *;
+@use "styles/variables" as *;
+
+.project-card-container {
+  background-color: #e8f1fa;
+  padding: 19px 24px;
+  max-width: 100%;
+
+  h4 {
+    font-size: 1.2rem;
+    color: $sky-blue;
+    margin: 0px;
+    margin-top: 15px;
+    font-family: $font-nunito;
+    font-weight: 500;
+  }
+  h2 {
+    font-size: 1.6rem;
+    margin: 0px;
+    margin-top: 5px;
+  }
+  p {
+    font-size: 1.4rem;
+    font-family: $font-nunito;
+    color: $dark-blue;
+    font-weight: 500;
+  }
+  img {
+    height: 367px;
+    width: 100%;
+    object-fit: cover;
+  }
+
+  @include respond(sm) {
+    h4 {
+      font-size: 0.8rem;
+    }
+    h2 {
+      font-size: 1rem;
+    }
+    p {
+      font-size: 0.9rem;
+    }
+  }
+
+  @include respond(md) {
+    h4 {
+      font-size: 0.6rem;
+    }
+    h2 {
+      font-size: 0.8rem;
+    }
+    p {
+      font-size: 0.7rem;
+    }
+  }
+}
+
+.project-card-swiper-container {
+  height: 367px;
+}

@@ -1,0 +1,18 @@
+<div class="project-card-container">
+  <swiper-container
+    #projectImagesSwiperContainer
+    class="project-card-swiper-container"
+    slides-per-view="auto"
+    autoplay='{"delay": 3000}'
+    speed="400"
+    loop="true"
+    effect="fade"
+  >
+    <swiper-slide *ngFor="let imageSrc of imageSrcs">
+      <img class="project-image" [src]="imageSrc" alt="Imagen de Proyecto" />
+    </swiper-slide>
+  </swiper-container>
+  <h4>{{ titleH4 }}</h4>
+  <h2>{{ titleH2 }}</h2>
+  <p>{{ description }}</p>
+</div>
