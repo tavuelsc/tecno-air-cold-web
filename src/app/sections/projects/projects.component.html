@@ -1,0 +1,55 @@
+<section ngSkipHydration id="proyectos" class="scroll-targetable-section">
+  <div class="projects-data-container">
+    <div class="title-container">
+      <h1>Proyectos</h1>
+      <div class="projects-carousel-buttons-container">
+        <button
+          class="custom-swiper-nav-button"
+          [disabled]="isBeginning"
+          (click)="slidePrev()"
+        >
+          <img
+            class="carousel-navigation-arrow prev"
+            src="assets/images/icons/icon-right-arrow.svg"
+            alt="Anterior"
+          />
+        </button>
+        <button
+          class="custom-swiper-nav-button"
+          [disabled]="isEnd"
+          (click)="slideNext()"
+        >
+          <img
+            class="carousel-navigation-arrow"
+            src="assets/images/icons/icon-right-arrow.svg"
+            alt="Siguiente"
+          />
+        </button>
+      </div>
+      <div class="title-bottom-line">
+        <div class="title-bottom-line-shorter"></div>
+      </div>
+    </div>
+
+    <swiper-container
+      #projectsSwiperContainer
+      id="projectsSwiperContainer"
+      class="projects-swiper-container"
+      breakpoints='{
+        "768": { "slidesPerView": 2 },
+        "1280": { "slidesPerView": 3 }
+      }'
+      mousewheel-force-to-axis="true"
+      speed="200"
+    >
+      <swiper-slide *ngFor="let project of projects">
+        <app-project-card
+          [imageSrcs]="project.imageSrcs"
+          [titleH4]="project.locationName"
+          [titleH2]="project.clientName"
+          [description]="project.projectDescription"
+        ></app-project-card>
+      </swiper-slide>
+    </swiper-container>
+  </div>
+</section>

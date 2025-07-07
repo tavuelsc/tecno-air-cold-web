@@ -138,20 +138,20 @@
       background-color: white;
       color: $dark-blue;
       border-radius: 100%;
-      padding: 3px;
       height: 1.5rem;
       width: 1.5rem;
-      display: flex;
-      justify-content: center;
-      align-items: center;
+      font-weight: 900;
     }
 
-    @include respond(sm) {
+    @include respond(lg) {
       display: none;
     }
   }
 
-  @include respond(sm) {
+  @include respond(md) {
+    padding: 14px 27px;
+  }
+  @include respond(lg) {
     padding: 0.4rem 1.5rem;
 
     .desktop-menu {
@@ -160,9 +160,5 @@
     .hamburger-button {
       display: none;
     }
-  }
-
-  @include respond(md) {
-    padding: 14px 27px;
   }
 }
