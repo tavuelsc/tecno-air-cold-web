@@ -11,6 +11,7 @@ import { CommonModule } from '@angular/common';
 export class ReviewCardComponent {
   @Input() reviewerName?: string = 'Anónimo';
   @Input() serviceDescription?: string;
+  @Input() referenceImageUrl: string = '';
   @Input() serviceReview: string = '';
   @Input() companyName: string = '';
   @Input() ratingScore: number = 0;
