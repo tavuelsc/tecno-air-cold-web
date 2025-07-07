@@ -84,10 +84,10 @@ const projectH = {
     'assets/images/projects/img-project-h-b.webp',
     'assets/images/projects/img-project-h-c.webp',
   ],
-  locationName: 'San José - Plaza Roble',
-  clientName: 'Office Space Software (OSS)',
+  locationName: 'Santa Ana, San José',
+  clientName: 'Plaza Pozos',
   projectDescription:
-    'Se ejecutó la remodelación de oficinas, incluyendo el reacomodo de ductos y rejillas de suministro para un sistema central de aire acondicionado por agua helada (chillers), además de la instalación de cuatro unidades mini Split para reforzar la climatización por zonas.',
+    'Se realizó el desarmado de evaporadores tipo cassette y del condensador VRF para limpieza profunda de serpentines, piezas internas y revisión general. También se llevó a cabo la limpieza y verificación de componentes eléctricos, garantizando un funcionamiento eficiente y seguro del sistema.',
 };
 const projectI = {
   imageSrcs: [
