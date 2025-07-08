@@ -2,13 +2,13 @@
 @use "styles/variables" as *;
 
 #proyectos {
-  padding: 67px 38px;
+  padding: 67px 16px;
 
   @include respond(sm) {
     padding: 52px 52px;
   }
   @include respond(md) {
-    padding: 78px 68px;
+    padding: 78px 48;
   }
 }
 
@@ -108,35 +108,28 @@
 .title-bottom-line {
   position: absolute;
   left: 0px;
-  bottom: 1px;
+  bottom: 0px;
   width: 100%;
-  height: 1px;
-  background-color: #d6d6d6;
-  border-radius: 10px;
-}
-.title-bottom-line-shorter {
-  position: absolute;
-  left: 0px;
-  top: 50%;
-  transform: translate(0px, -75%);
-  width: 50px;
   height: 2px;
   background-color: $dark-blue;
   border-radius: 10px;
-
-  @include respond(md) {
-    width: 150px;
-  }
-
-  @include respond(xl) {
-    width: 626px;
-  }
 }
-
-projects-swiper-container {
+.main-carousel-container {
   display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2px;
 }
+swiper-container {
+  width: 83%;
 
+  @include respond(sm) {
+    width: 89%;
+  }
+  @include respond(lg) {
+    width: 92%;
+  }
+}
 swiper-slide {
   align-self: stretch;
   transition: transform 0.3s, box-shadow 0.3s;
