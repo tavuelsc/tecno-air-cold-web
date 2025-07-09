@@ -42,7 +42,7 @@ const projectD = {
   locationName: 'San José',
   clientName: 'Hospital Metropolitano',
   projectDescription:
-    'Durante la transformación de las antiguas oficinas de Farmagro en un hospital, se instalaron cinco sistemas VRF SAMSUNG en dos etapas. Se implementaron también sistemas de ventilación para baños y pasillos, optimizando el ambiente interior.',
+    'Durante la transformación de las antiguas oficinas de FarmAgro en un hospital, se instalaron cinco sistemas VRF SAMSUNG en dos etapas. Se implementaron también sistemas de ventilación para baños y pasillos, optimizando el ambiente interior.',
 };
 const projectE = {
   imageSrcs: [
@@ -63,7 +63,7 @@ const projectF = {
     'assets/images/projects/img-project-f-d.webp',
   ],
   locationName: 'Escazú',
-  clientName: 'Tienda SCOT',
+  clientName: 'Tienda SCOTT',
   projectDescription:
     'Se realizó la instalación de dos equipos de aire acondicionado tipo cassette, brindando una solución eficiente y discreta para el confort del local comercial.',
 };

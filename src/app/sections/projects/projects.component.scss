@@ -131,7 +131,6 @@ swiper-container {
   }
 }
 swiper-slide {
-  align-self: stretch;
   transition: transform 0.3s, box-shadow 0.3s;
 
   @include respond(md) {
