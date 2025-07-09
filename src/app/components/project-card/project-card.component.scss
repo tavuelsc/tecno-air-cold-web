@@ -5,26 +5,9 @@
   background-color: #e8f1fa;
   padding: 19px 24px;
   max-width: 100%;
+  min-height: 580px;
+  height: 580px;
 
-  h4 {
-    font-size: 1.2rem;
-    color: $sky-blue;
-    margin: 0px;
-    margin-top: 15px;
-    font-family: $font-nunito;
-    font-weight: 500;
-  }
-  h2 {
-    font-size: 1.6rem;
-    margin: 0px;
-    margin-top: 5px;
-  }
-  p {
-    font-size: 1.4rem;
-    font-family: $font-nunito;
-    color: $dark-blue;
-    font-weight: 500;
-  }
   img {
     height: 367px;
     width: 100%;
@@ -54,4 +37,37 @@
       font-size: 0.7rem;
     }
   }
+}
+.project-card-container.expanded {
+  height: auto;
+}
+
+.projec-location-title {
+  font-size: 1.2rem;
+  color: $sky-blue;
+  margin: 0px;
+  margin-top: 15px;
+  font-family: $font-nunito;
+  font-weight: 500;
+}
+.client-title {
+  font-size: 1.6rem;
+  margin: 0px;
+  margin-top: 5px;
+}
+.project-description {
+  font-size: 1.4rem;
+  font-family: $font-nunito;
+  color: $dark-blue;
+  font-weight: 500;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.project-description.expanded {
+  -webkit-line-clamp: unset;
+  overflow: visible;
+  display: block;
 }

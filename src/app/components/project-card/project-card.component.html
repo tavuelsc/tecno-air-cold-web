@@ -1,4 +1,8 @@
-<div class="project-card-container">
+<div
+  class="project-card-container"
+  [class.expanded]="isExpanded"
+  (click)="handleProjectCardClick()"
+>
   <swiper-container
     #projectImagesSwiperContainer
     class="project-card-swiper-container"
@@ -12,7 +16,9 @@
       <img class="project-image" [src]="imageSrc" alt="Imagen de Proyecto" />
     </swiper-slide>
   </swiper-container>
-  <h4>{{ titleH4 }}</h4>
-  <h2>{{ titleH2 }}</h2>
-  <p>{{ description }}</p>
+  <h4 class="projec-location-title">{{ titleH4 }}</h4>
+  <h2 class="client-title">{{ titleH2 }}</h2>
+  <p class="project-description expanded" [class.expanded]="isExpanded">
+    {{ description }}
+  </p>
 </div>
