@@ -9,6 +9,7 @@ import { ContactComponent } from './sections/contact/contact.component';
 import { MatIconRegistry } from '@angular/material/icon';
 import { DomSanitizer } from '@angular/platform-browser';
 import { FooterComponent } from './components/footer/footer.component';
+import { ProjectsComponent } from './sections/projects/projects.component';
 
 @Component({
   selector: 'app-root',
@@ -16,11 +17,12 @@ import { FooterComponent } from './components/footer/footer.component';
     NavbarComponent,
     HomeComponent,
     ServicesComponent,
+    ProjectsComponent,
     ReviewsComponent,
     ExperienceComponent,
     TeamComponent,
     ContactComponent,
-    FooterComponent
+    FooterComponent,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
@@ -48,6 +50,12 @@ export class AppComponent {
       'tools',
       this.sanitizer.bypassSecurityTrustResourceUrl(
         'assets/images/icons/icon-tools.svg'
+      )
+    );
+    this.iconRegistry.addSvgIcon(
+      'panel',
+      this.sanitizer.bypassSecurityTrustResourceUrl(
+        'assets/images/icons/icon-panel.svg'
       )
     );
     this.iconRegistry.addSvgIcon(

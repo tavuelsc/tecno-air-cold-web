@@ -1,7 +1,10 @@
 <nav class="navbar" [class.scrolled]="isScrolled">
   <div class="logo">
     <a href="#inicio">
-      <img src="assets/images/logos/logo-tecno-air-cold-logo.webp" alt="Tecno Air Cold logo">
+      <img
+        src="assets/images/logos/logo-tecno-air-cold-logo.webp"
+        alt="Tecno Air Cold logo"
+      />
     </a>
   </div>
   <ul class="desktop-menu">
@@ -11,6 +14,11 @@
     <li>
       <a href="#servicios" [class.active]="activeSection === 'servicios'"
         >Servicios</a
+      >
+    </li>
+    <li>
+      <a href="#proyectos" [class.active]="activeSection === 'proyectos'"
+        >Proyectos</a
       >
     </li>
     <li>
@@ -41,9 +49,7 @@
 
   <ul class="mobile-menu" [class.open]="menuOpen">
     <li>
-      <button class="mobile-menu-close-btn" (click)="closeMenu()">
-        <img src="assets/images/icons/icon-cross.svg" alt="Cerrar Menú" />
-      </button>
+      <button class="mobile-menu-close-btn" (click)="closeMenu()">X</button>
     </li>
     <li>
       <a
@@ -63,6 +69,16 @@
       >
         <mat-icon svgIcon="tools"></mat-icon>
         Servicios</a
+      >
+    </li>
+    <li>
+      <a
+        href="#proyectos"
+        [class.active]="activeSection === 'proyectos'"
+        (click)="closeMenu()"
+      >
+        <mat-icon svgIcon="panel"></mat-icon>
+        Proyectos</a
       >
     </li>
     <li>
