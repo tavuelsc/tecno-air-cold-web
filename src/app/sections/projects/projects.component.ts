@@ -3,7 +3,9 @@ import {
   Component,
   CUSTOM_ELEMENTS_SCHEMA,
   ElementRef,
+  QueryList,
   ViewChild,
+  ViewChildren,
 } from '@angular/core';
 import { ProjectCardComponent } from '../../components/project-card/project-card.component';
 import { CommonModule } from '@angular/common';
@@ -20,7 +22,9 @@ import { projectsData } from '../../data/projects.data';
     ngSkipHydration: '',
   },
 })
-export class ProjectsComponent {
+export class ProjectsComponent implements AfterViewInit {
+  @ViewChildren(ProjectCardComponent)
+  projectCards!: QueryList<ProjectCardComponent>;
   @ViewChild('projectsSwiperContainer', { static: false })
   swiperRef!: ElementRef;
   projects = projectsData;
@@ -34,6 +38,7 @@ export class ProjectsComponent {
       const targetId = event.target.id;
       if (targetId !== 'projectsSwiperContainer') return;
       this.updateButtonStates();
+      this.setAllProjectCardsExpanded(false);
     });
   }
 
@@ -51,5 +56,9 @@ export class ProjectsComponent {
 
   slideNext() {
     this.swiperRef.nativeElement?.swiper.slideNext();
+  }
+
+  setAllProjectCardsExpanded(state: boolean) {
+    this.projectCards.forEach((card) => card.setExpanded(state));
   }
 }

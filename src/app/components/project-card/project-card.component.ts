@@ -14,4 +14,14 @@ export class ProjectCardComponent {
   @Input() titleH4: string = 'Texto sin Definir...';
   @Input() titleH2: string = 'Texto sin Definir...';
   @Input() description: string = 'Texto sin Definir...';
+
+  @Input() isExpanded = false;
+
+  setExpanded(value: boolean) {
+    this.isExpanded = value;
+  }
+
+  handleProjectCardClick(): void {
+    this.isExpanded = !this.isExpanded;
+  }
 }
