@@ -57,38 +57,46 @@
   }
 }
 .team-section-workers-container {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  grid-template-rows: repeat(2, minmax(0, 1fr));
+  display: flex;
+  flex-direction: column;
   gap: 16px;
-  padding: 0px 32px;
-  max-width: 1192px;
-  margin: auto;
+  padding: 0 16px;
+}
 
-  @include respond(xs) {
-    padding: 0px 72px;
-  }
+.team-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px;
 
-  @include respond(sm) {
-    padding: 0px 116px;
+  app-team-worker-card {
+    flex: 0 0 100%;
+    max-width: 240px;
   }
-  @include respond(md) {
-    padding: 0px 100px;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    grid-template-rows: repeat(2, minmax(0, 1fr));
+}
+
+@include respond(md) {
+  .row-desktop-1 app-team-worker-card {
+    flex: 0 0 calc(50% - 8px);
+    max-width: 240px;
   }
-  @include respond(lg) {
-    padding: 0px 150px;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    grid-template-rows: repeat(2, minmax(0, 1fr));
+  .row-desktop-2 app-team-worker-card {
+    flex: 0 0 calc(33.333% - 10.66px);
+    max-width: 240px;
   }
-  @include respond(xl) {
-    column-gap: 64px;
-    row-gap: 0px;
-    padding: 0px 124px;
+}
+
+@include respond(sm) {
+  .row-mobile-1 app-team-worker-card {
+    flex: 0 0 100%;
+    max-width: 240px;
   }
-  @include respond(2xl) {
-    padding: 0px 96px;
+  .row-mobile-2 app-team-worker-card:nth-child(1),
+  .row-mobile-2 app-team-worker-card:nth-child(2),
+  .row-mobile-2 app-team-worker-card:nth-child(3),
+  .row-mobile-2 app-team-worker-card:nth-child(4) {
+    flex: 0 0 calc(50% - 8px);
+    max-width: 240px;
   }
 }
 
