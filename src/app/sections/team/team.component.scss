@@ -57,38 +57,66 @@
   }
 }
 .team-section-workers-container {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  grid-template-rows: repeat(2, minmax(0, 1fr));
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 16px;
-  padding: 0px 32px;
-  max-width: 1192px;
-  margin: auto;
+  margin: 0 auto;
+  max-width: 1000px;
 
-  @include respond(xs) {
-    padding: 0px 72px;
+  app-team-worker-card {
+    width: 100%;
   }
 
-  @include respond(sm) {
-    padding: 0px 116px;
+  app-team-worker-card:nth-child(1) {
+    flex: 0 0 100%;
+    order: 1;
+    margin: 0 10rem;
+    max-width: 280px;
   }
+
+  app-team-worker-card:nth-child(2),
+  app-team-worker-card:nth-child(3) {
+    flex: 0 0 calc(50% - 8px);
+    order: 2;
+    max-width: 240px;
+  }
+
+  app-team-worker-card:nth-child(4),
+  app-team-worker-card:nth-child(5) {
+    flex: 0 0 calc(50% - 8px);
+    order: 3;
+    max-width: 240px;
+  }
+
   @include respond(md) {
-    padding: 0px 100px;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    grid-template-rows: repeat(2, minmax(0, 1fr));
+    app-team-worker-card:nth-child(1) {
+      max-width: 300px;
+      margin: 0px 15rem;
+    }
+
+    app-team-worker-card:nth-child(2),
+    app-team-worker-card:nth-child(3),
+    app-team-worker-card:nth-child(4),
+    app-team-worker-card:nth-child(5) {
+      max-width: 280px;
+      margin: 0px 2rem;
+    }
   }
+
   @include respond(lg) {
-    padding: 0px 150px;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    grid-template-rows: repeat(2, minmax(0, 1fr));
-  }
-  @include respond(xl) {
-    column-gap: 64px;
-    row-gap: 0px;
-    padding: 0px 124px;
-  }
-  @include respond(2xl) {
-    padding: 0px 96px;
+    app-team-worker-card:nth-child(3),
+    app-team-worker-card:nth-child(4),
+    app-team-worker-card:nth-child(5) {
+      max-width: 260px;
+      margin: 0rem;
+    }
+
+    app-team-worker-card:nth-child(1),
+    app-team-worker-card:nth-child(2) {
+      margin: 0px 3rem;
+      max-width: 260px;
+    }
   }
 }
 
